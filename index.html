@@ -230,6 +230,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       box-sizing: border-box;
     }
+    /* WhatsApp Button */
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -282,6 +283,67 @@
       .about-us {
         margin: 10px 10px;
       }
+    }
+
+    /* Testimonial slider styles */
+    .testimonial-container {
+      max-width: 800px;
+      margin: 40px auto 60px auto;
+      background: #0066cc;
+      color: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .testimonial-container h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .testimonial-slider {
+      position: relative;
+      height: 140px;
+      overflow: hidden;
+    }
+    .testimonial-slide {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .testimonial-slide.active {
+      opacity: 1;
+      position: relative;
+    }
+    .testimonial-slide p {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .testimonial-slide strong {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .testimonial-dots {
+      margin-top: 15px;
+    }
+    .testimonial-dots .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 6px;
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .testimonial-dots .dot.active {
+      background-color: white;
     }
   </style>
 </head>
@@ -401,28 +463,10 @@
   </iframe>
 </div>
 
-<a href="https://wa.me/919444261111" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
-
-<script>
-  const slides = document.querySelectorAll('.banner-slider .slide');
-  let current = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  // Start slider
-  setInterval(nextSlide, 4000); // change slide every 4 seconds
-</script>
-
-</body>
-</html>
+<!-- Patient Testimonial Slider -->
+<div class="testimonial-container">
+  <h2>Patient Testimonials</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial-slide active">
+      <p>"Dr. Mani treated my fracture very well. I recovered quickly and felt great care."</p>
+      <strong>- Ramesh K.</strong>
