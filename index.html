@@ -317,10 +317,38 @@
     .testimonials-container p {
       margin-bottom: 20px;
     }
+      #call-btn {
+    position: fixed;
+    bottom: 20px;
+    left: -250px; /* start off-screen */
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, left 0.6s ease;
+    white-space: nowrap;
+  }
+  #call-btn:hover {
+    background-color: #45a049;
+  }
+  /* When loaded */
+  #call-btn.show {
+    left: 20px; /* final position */
+  }
   </style>
 </head>
 <body>
-
+<a id="call-btn" href="tel:9444261111" aria-label="Call Dr. Mani" title="Call Dr. Mani">
+  📞 94442&nbsp;61111
+</a>
 <!-- Banner carousel container -->
 <div class="banner-slider">
   <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1576765607923-522c426e3266?auto=format&fit=crop&w=1350&q=80');">
@@ -364,9 +392,7 @@
 <header>
   <h1>🏥 Dr. MANI'S ORTHO SPECIALITY & GENERAL CLINIC</h1>
   <p>Dr. Mani Arumugam, M.B.B.S., M.S. (Ortho) – Orthopedic Specialist & General Physician</p>
-  <p class="phone-number">
-    <a href="tel:+919444261111" aria-label="Call +91 94442 61111">📞 +91 94442 61111</a>
-  </p>
+  
 </header>
 
 <div class="about-us">
@@ -466,6 +492,10 @@
   }
 
   setInterval(nextSlide, 4000); // change slide every 4 seconds
+  // Wait until page is fully loaded, then slide in the button
+  window.addEventListener('load', function() {
+    document.getElementById('call-btn').classList.add('show');
+  });
 </script>
 
 </body>
