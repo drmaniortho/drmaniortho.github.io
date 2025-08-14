@@ -1,26 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://drmaniortho.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Orthopedic Services -->
-  <url><loc>https://drmaniortho.in/#knee</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://drmaniortho.in/#back-neck</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Add other services similarly... -->
-
-  <!-- General Health -->
-  <url><loc>https://drmaniortho.in/#general-health</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- Clinic Info & Contact -->
-  <url><loc>https://drmaniortho.in/#clinic-timing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://drmaniortho.in/#contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- Appointment Form -->
-  <url><loc>https://drmaniortho.in/#appointment-form</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- Testimonials -->
-  <url><loc>https://drmaniortho.in/#testimonials</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://drmaniortho.in/</loc>
+<lastmod>2025-08-14T07:53:57+00:00</lastmod>
+</url>
 </urlset>
