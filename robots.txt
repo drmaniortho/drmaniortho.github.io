@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drmaniortho.in/sitemap.xml
+Sitemap: https://drmaniortho.github.io/sitemap.xml
