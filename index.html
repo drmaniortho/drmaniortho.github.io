@@ -561,11 +561,29 @@
 
 <!-- Patient Testimonials Section -->
 <section class="testimonials-container">
-  <h2>Patient Testimonials</h2>
-  <p>"Dr. Mani provided excellent care and helped me recover quickly. Highly recommended!"<br/><strong>- Ramesh K.</strong></p>
-  <p>"Friendly staff and very professional treatment. The clinic is clean and well-equipped."<br/><strong>- Anjali S.</strong></p>
-  <p>"Great experience with joint replacement surgery. Now I’m pain-free and mobile again."<br/><strong>- Vijay M.</strong></p>
+  <div id="google-reviews"></div>
+
+<script>
+fetch('get-reviews.php')
+  .then(response => response.json())
+  .then(data => {
+    const reviews = data.result.reviews;
+    let html = `<h3>What Our Patients Say</h3>`;
+    reviews.forEach(r => {
+      html += `
+        <div style="border:1px solid #ccc;padding:10px;margin-bottom:10px;">
+          <strong>${r.author_name}</strong> - ⭐ ${r.rating}<br>
+          <em>${r.relative_time_description}</em>
+          <p>${r.text}</p>
+        </div>
+      `;
+    });
+    document.getElementById('google-reviews').innerHTML = html;
+  })
+  .catch(err => console.error(err));
+</script>
 </section>
+  
 
 <script>
   const slides = document.querySelectorAll('.banner-slider .slide');
